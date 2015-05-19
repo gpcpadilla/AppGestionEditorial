@@ -80,6 +80,15 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\Cientificos.cs" />
+    <Compile Include="Modelo\Documentos.cs" />
+    <Compile Include="Modelo\Formatos.cs" />
+    <Compile Include="Modelo\Impreso.cs" />
+    <Compile Include="Modelo\IPublicacion.cs" />
+    <Compile Include="Modelo\Libroscs.cs" />
+    <Compile Include="Modelo\Online.cs" />
+    <Compile Include="Modelo\Pdf.cs" />
+    <Compile Include="Modelo\Revistas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +102,6 @@
   <ItemGroup>
     <Folder Include="Datos\" />
     <Folder Include="DocumentosXML\" />
-    <Folder Include="Modelo\" />
     <Folder Include="Web\" />
   </ItemGroup>
   <PropertyGroup>
