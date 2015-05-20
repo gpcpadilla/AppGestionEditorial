@@ -8,10 +8,16 @@ namespace AppGestionEditorial.Modelo
     public class Documentos {
     #region "Atributos"
         private int codigo;        
-        private string nombre;        
+        private string titulo;        
         private string editorial;        
         private string edicion;
-        private string  autor;
+        private string  autores;
+        private string idiomas;
+        private string categorias;
+        private int numeropaginas;
+        private DateTime fechaedicion ;
+        private DateTime fechapublicacion;
+        
         #endregion
 
     #region "Propiedades"
@@ -21,10 +27,10 @@ namespace AppGestionEditorial.Modelo
             set { codigo = value; }
         }
 
-        public string NombreDelLibro
+        public string TituloDelLibro
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { return titulo; }
+            set { titulo = value; }
         }
 
         public string Editorial
@@ -39,12 +45,41 @@ namespace AppGestionEditorial.Modelo
             set { edicion = value; }
         }
 
-        public string Autor
+        public string Autores
         {
-            get { return autor; }
-            set { autor = value; }
+            get { return autores; }
+            set { autores = value; }
         }
-        
+
+        public string Idiomas
+        {
+            get { return idiomas; }
+            set { idiomas = value; }
+        }
+
+        public string Categorias
+        {
+            get { return categorias; }
+            set { categorias = value; }
+        }
+
+        public int NumeroPaginas
+        {
+            get { return numeropaginas; }
+            set { numeropaginas = value; }
+        }
+
+        public DateTime FechaEdicion
+        {
+            get { return fechaedicion; }
+            set {  fechaedicion  = value; }
+        }
+
+        public DateTime FechaPublicacion
+        {
+            get { return fechapublicacion; }
+            set { fechapublicacion = value; }
+        }
         #endregion
 
     #region "Constructores"
@@ -54,33 +89,49 @@ namespace AppGestionEditorial.Modelo
             ///Contructor de Cuentas
             ///</summary>
             this.codigo = 0000;
-            this.nombre = "Nombre Del Libro";
+            this.titulo = "Titulo Del Libro";
             this.editorial = "Editorial";
             this.edicion = "Edicion Del Libro";
-            this.autor = "Autor";
+            this.autores = "Autores";
+            this.idiomas = "Idiomas";
+            this.editorial = "Categorias";
+            this.edicion = "Numero De Paginas";
+            this.autores = "Fecha De Edicion";
+            this.idiomas = "Fecha De Publicacion";
            
         }
        
-        public Documentos(int codigo , string nombre, string editorial, string  edicion, string autor)
+        public Documentos(int codigo , string titulo, string editorial, string  edicion, string autores, string idiomas,
+            string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion)
         {
             this.codigo = Codigo;
-            this.nombre = NombreDelLibro;
+            this.titulo = TituloDelLibro;
             this.editorial = Editorial;
             this.edicion = Edicion;
-            this.autor = Autor;
+            this.autores = Autores;
+            this.idiomas = Idiomas;
+            this.categorias = Categorias;
+            this.numeropaginas = NumeroPaginas;
+            this.fechaedicion = FechaEdicion;
+            this.fechapublicacion = FechaPublicacion;
         }
         #endregion
 
     #region "Metodos Sobre Escritos"
         public override string ToString()
         {
-            return  "Nombre de la Clase" +
+            return "Nombre de la Clase" +
                 "\n=============================================" +
-                     "\nCodigo Del Libro  " + this.codigo  +
-                     "\nNombre Del Libro  " + this.nombre  +
-                     "\nEditorial Del Libro: " + this.editorial  +
+                     "\nCodigo Del Libro  " + this.codigo +
+                     "\nTitulo Del Libro  " + this.titulo +
+                     "\nEditorial Del Libro: " + this.editorial +
                      "\nEdicion Del Libro: " + this.edicion +
-                     "\nAutor: " + this.autor;
+                     "\nAutores: " + this.autores +
+                     "\nIdiomas: " + this.idiomas +
+                     "\nCategorias: " + this.categorias +
+                     "\nNumero De Paginas: " + this.numeropaginas +
+                     "\nFecha De Edicion: " + this.fechaedicion +
+                     "\nFecha De Publicacion: " + this.fechapublicacion;
         }
 
         public override bool Equals(object obj)
@@ -89,10 +140,15 @@ namespace AppGestionEditorial.Modelo
             bool result = false;
 
             if ((this.codigo == o.codigo) &&
-                (this.nombre == o.nombre) &&
+                (this.titulo == o.titulo) &&
                 (this.editorial == o.editorial) &&
                 (this.edicion == o.edicion) &&
-                (this.autor == o.autor))
+                (this.autores == o.autores) &&
+                (this.idiomas == o.idiomas)&&
+                (this.categorias == o.categorias) &&
+                (this.numeropaginas == o.numeropaginas) &&
+                (this.fechaedicion == o.fechaedicion) &&
+                (this.fechapublicacion == o.fechapublicacion))
 
                 result = true;
 

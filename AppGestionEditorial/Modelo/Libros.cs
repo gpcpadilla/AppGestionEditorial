@@ -9,29 +9,30 @@ namespace AppGestionEditorial.Modelo
     {
     #region "Atributos"
                 
-        private string genero;        
-        private string biografia;
-        private string glosario;
+        private int numerotomos;        
+        private int numerocapitulos;
+        private string nivel;
+        
         #endregion
 
     #region "Propiedades"
         
-        public string Genero
+        public int NumeroTomos
         {
-            get { return genero; }
-            set { genero = value; }
+            get { return numerotomos; }
+            set { numerotomos = value; }
         }
 
-         public string Biografia
+         public int NumeroCapitulos
         {
-            get { return biografia; }
-            set { biografia = value; }
+            get { return numerocapitulos; }
+            set { numerocapitulos = value; }
         }
 
-         public string Glosario
+         public string Nivel
          {
-             get { return glosario; }
-             set { glosario = value; }
+             get { return nivel; }
+             set { nivel = value; }
          }
        
         
@@ -42,13 +43,14 @@ namespace AppGestionEditorial.Modelo
         {
            
         }
-       
-        public Libros(int codigo , string nombre, string editorial, string  edicion, string autor, string genero,
-            string biografia, string glosario)
+
+        public Libros(int codigo, string titulo, string editorial, string edicion, string autores, string idiomas,
+            string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion, 
+            int numerotomos, int numerocapitulos, string nivel)
         {
-            this.genero = genero;
-            this.biografia = biografia;
-            this.glosario = glosario;
+            this.numerotomos = NumeroTomos;
+            this.numerocapitulos = NumeroCapitulos;
+            this.nivel = Nivel;
             
         }
         #endregion
@@ -58,9 +60,9 @@ namespace AppGestionEditorial.Modelo
         {
             return  "Nombre de la Clase" +
                 "\n=============================================" +
-                     "\nGenero Del Libro  " + this.genero  +
-                     "\nBiografia Del Libro  " + this.biografia  +
-                     "\nGlosario Del Libro: " + this.glosario;
+                     "\nNumero De tomos  " + this.numerotomos  +
+                     "\nNumeros De capitulos  " + this.numerocapitulos  +
+                     "\nNivel: " + this.nivel;
         }
 
         public override bool Equals(object obj)
@@ -68,9 +70,9 @@ namespace AppGestionEditorial.Modelo
             Libros o = (Libros)obj;
             bool result = false;
 
-            if ((this.genero == o.genero) &&
-                (this.biografia == o.biografia) &&
-                (this.glosario == o.glosario))
+            if ((this.numerotomos == o.numerotomos) &&
+                (this.numerocapitulos == o.numerocapitulos) &&
+                (this.nivel == o.nivel))
 
                 result = true;
 

@@ -93,11 +93,7 @@
     <Compile Include="Modelo\Documentos.cs" />
     <Compile Include="Modelo\Factura.cs" />
     <Compile Include="Modelo\Formatos.cs" />
-    <Compile Include="Modelo\Impreso.cs" />
-    <Compile Include="Modelo\IPublicacion.cs" />
     <Compile Include="Modelo\Libros.cs" />
-    <Compile Include="Modelo\Online.cs" />
-    <Compile Include="Modelo\Pdf.cs" />
     <Compile Include="Modelo\Revistas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\Index.aspx.cs">

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AppGestionEditorial.Modelo
 {
-    public class IPublicacion
+    public class Factura
     {
     }
 }

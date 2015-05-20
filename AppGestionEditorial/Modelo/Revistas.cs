@@ -9,32 +9,26 @@ namespace AppGestionEditorial.Modelo
     {
     #region "Atributos"
                 
-        private string avisospublicitarios;        
-        private string articulos;
-        private string tess;
+            
+        private int numeroarticulos;
+        private int numerovolumenes;
 
         #endregion
 
     #region "Propiedades"
         
-        public string AvisosPublicitarios
+        public int NumeroArticulos
         {
-            get { return avisospublicitarios; }
-            set { avisospublicitarios = value; }
+            get { return numeroarticulos; }
+            set { numeroarticulos = value; }
         }
 
-         public string Artuculos
+         public int NumeroVolumenes
         {
-            get { return articulos; }
-            set { articulos = value; }
+            get { return numerovolumenes; }
+            set { numerovolumenes = value; }
         }
 
-         public string Tess
-         {
-             get { return tess; }
-             set { tess = value; }
-         }
-       
         
         #endregion
 
@@ -44,13 +38,12 @@ namespace AppGestionEditorial.Modelo
            
         }
 
-        public Revistas(int codigo, string nombre, string editorial, string edicion, string autor, string avisospublicitarios,
-            string articulos, string tess)
+        public Revistas(int codigo, string titulo, string editorial, string edicion, string autores, string idiomas,
+            string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion, int numeroarticulos, int numerovolumenes)
         {
-            this.avisospublicitarios = avisospublicitarios;
-            this.articulos = articulos;
-            this.tess = tess;
-            
+            this.numerovolumenes = NumeroVolumenes;
+            this.numeroarticulos = NumeroArticulos;
+           
         }
         #endregion
 
@@ -59,9 +52,8 @@ namespace AppGestionEditorial.Modelo
         {
             return  "Nombre de la Clase" +
                 "\n=============================================" +
-                     "\nAvisos Publicitarios " + this.avisospublicitarios +
-                     "\nArticulos " + this.articulos  +
-                     "\nTess: " + this.tess;
+                    "\nNumero De Articulos " + this.numeroarticulos  +
+                     "\nNumero De Volumenes: " + this.numerovolumenes;
         }
 
         public override bool Equals(object obj)
@@ -69,9 +61,8 @@ namespace AppGestionEditorial.Modelo
             Revistas o = (Revistas)obj;
             bool result = false;
 
-            if ((this.avisospublicitarios == o.avisospublicitarios) &&
-                (this.articulos == o.articulos) &&
-                (this.tess == o.tess))
+            if ((this.numeroarticulos == o.numeroarticulos) &&
+                (this.numerovolumenes == o.numerovolumenes))
 
                 result = true;
 
