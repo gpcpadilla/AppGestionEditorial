@@ -47,7 +47,7 @@ namespace AppGestionEditorial.Modelo
         
         #endregion
 
-        #region "Constructores"
+    #region "Constructores"
         public Documentos()
         {
             ///<summary>
@@ -60,15 +60,8 @@ namespace AppGestionEditorial.Modelo
             this.autor = "Autor";
            
         }
-        ///<summary>
-        ///Contructor de inicialización Cuentas
-        ///</summary>
-        ///<param name="nombre">Nombre del Cliente</param>
-        ///<param name="cliente">Numero de cuenta del Cliente</param>
-        ///<param name="id">Numero de cedula del Cliente</param>
-        ///<param name="monto">Balance actual del Cliente  </param>
-        ///
-        public Documentos(int codigo , string identificacion, string idcliente, double balance)
+       
+        public Documentos(int codigo , string nombre, string editorial, string  edicion, string autor)
         {
             this.codigo = Codigo;
             this.nombre = NombreDelLibro;
@@ -78,26 +71,28 @@ namespace AppGestionEditorial.Modelo
         }
         #endregion
 
-        #region "Metodos Sobre Escritos"
+    #region "Metodos Sobre Escritos"
         public override string ToString()
         {
             return  "Nombre de la Clase" +
                 "\n=============================================" +
-                     "\nNombre:  " + this.cliente  +
-                     "\nNum Cuenta:  " + this.identificacion  +
-                     "\nIdentificacion Cliente: " + this.idcliente  +
-                     "\nBalance Actual: " + this.balance;
+                     "\nCodigo Del Libro  " + this.codigo  +
+                     "\nNombre Del Libro  " + this.nombre  +
+                     "\nEditorial Del Libro: " + this.editorial  +
+                     "\nEdicion Del Libro: " + this.edicion +
+                     "\nAutor: " + this.autor;
         }
 
         public override bool Equals(object obj)
         {
-            Cuentas o = (Cuentas)obj;
+            Documentos o = (Documentos)obj;
             bool result = false;
 
-            if ((this.cliente == o.cliente) &&
-                (this.identificacion == o.identificacion) &&
-                (this.idcliente == o.idcliente) &&
-                (this.balance == o.balance))
+            if ((this.codigo == o.codigo) &&
+                (this.nombre == o.nombre) &&
+                (this.editorial == o.editorial) &&
+                (this.edicion == o.edicion) &&
+                (this.autor == o.autor))
 
                 result = true;
 
