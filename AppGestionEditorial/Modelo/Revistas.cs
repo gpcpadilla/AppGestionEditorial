@@ -8,8 +8,7 @@ namespace AppGestionEditorial.Modelo
     public class Revistas : Documentos
     {
     #region "Atributos"
-                
-            
+                   
         private int numeroarticulos;
         private int numerovolumenes;
 
@@ -35,14 +34,16 @@ namespace AppGestionEditorial.Modelo
     #region "Constructores"
         public Revistas()
         {
+            this.numeroarticulos = 2;
+            this.numerovolumenes = 4;
            
         }
 
         public Revistas(int codigo, string titulo, string editorial, string edicion, string autores, string idiomas,
             string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion, int numeroarticulos, int numerovolumenes)
         {
-            this.numerovolumenes = NumeroVolumenes;
-            this.numeroarticulos = NumeroArticulos;
+            this.numerovolumenes = numerovolumenes;
+            this.numeroarticulos = numeroarticulos;
            
         }
         #endregion

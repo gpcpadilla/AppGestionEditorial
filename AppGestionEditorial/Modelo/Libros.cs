@@ -41,15 +41,17 @@ namespace AppGestionEditorial.Modelo
     #region "Constructores"
         public Libros()
         {
-           
+            this.numerotomos = 0000;
+            this.numerocapitulos = 12;
+            this.nivel = "4";
         }
 
         public Libros(int codigo, string titulo, string editorial, string edicion, string autores, string idiomas,
             string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion, 
             int numerotomos, int numerocapitulos, string nivel)
         {
-            this.numerotomos = NumeroTomos;
-            this.numerocapitulos = NumeroCapitulos;
+            this.numerotomos = numerotomos;
+            this.numerocapitulos = numerocapitulos;
             this.nivel = Nivel;
             
         }

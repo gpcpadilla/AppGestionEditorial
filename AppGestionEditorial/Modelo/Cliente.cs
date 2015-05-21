@@ -60,9 +60,7 @@ namespace AppGestionEditorial.Modelo
     #region "Constructores"
         public Cliente()
         {
-            ///<summary>
-            ///Contructor de Cuentas
-            ///</summary>
+        
             this.id = 0000;
             this.nombres = "nombre";
             this.apellidos = "apellidos";
@@ -74,12 +72,12 @@ namespace AppGestionEditorial.Modelo
 
         public Cliente(int id, string nombres, string apellidos, string direccion, int telefono, string email)
         {
-            this.id = Id;
-            this.nombres = Nombres;
-            this.apellidos = Apellidos;
-            this.direccion = Direccion;
-            this.telefono = Telefono;
-            this.email = Email;
+            this.id = id;
+            this.nombres = nombres;
+            this.apellidos = apellidos;
+            this.direccion = direccion;
+            this.telefono = telefono;
+            this.email = email;
             
         }
         #endregion

@@ -74,9 +74,7 @@ namespace AppGestionEditorial.Modelo
     #region "Constructores"
         public Formatos()
         {
-            ///<summary>
-            ///Contructor de Cuentas
-            ///</summary>
+  
             this.codigo = 0000;
             this.nombre = "nombre";
             this.leer = true;
@@ -91,14 +89,14 @@ namespace AppGestionEditorial.Modelo
 
         public Formatos(int codigo, string nombre, bool leer, bool guardar, bool imprimir, bool editar, bool escuchar, bool visualizar)
         {
-            this.codigo = Codigo;
-            this.nombre = Nombre;
-            this.leer = Leer;
-            this.guardar = Guardar;
-            this.imprimir = Imprimir;
-            this.editar = Editar;
-            this.escuchar = Escuchar;
-            this.visualizar = Visualizar;
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.leer = leer;
+            this.guardar = guardar;
+            this.imprimir = imprimir;
+            this.editar = editar;
+            this.escuchar = escuchar;
+            this.visualizar = visualizar;
             
         }
         #endregion

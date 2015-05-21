@@ -85,35 +85,33 @@ namespace AppGestionEditorial.Modelo
     #region "Constructores"
         public Documentos()
         {
-            ///<summary>
-            ///Contructor de Cuentas
-            ///</summary>
+            
             this.codigo = 0000;
             this.titulo = "Titulo Del Libro";
             this.editorial = "Editorial";
             this.edicion = "Edicion Del Libro";
             this.autores = "Autores";
             this.idiomas = "Idiomas";
-            this.editorial = "Categorias";
-            this.edicion = "Numero De Paginas";
-            this.autores = "Fecha De Edicion";
-            this.idiomas = "Fecha De Publicacion";
+            this.categorias = "Categorias";
+            this.numeropaginas = 23;
+            this.fechaedicion = fechaedicion.Date;
+            this.fechapublicacion = fechapublicacion.Date;
            
         }
        
         public Documentos(int codigo , string titulo, string editorial, string  edicion, string autores, string idiomas,
             string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion)
         {
-            this.codigo = Codigo;
-            this.titulo = TituloDelLibro;
-            this.editorial = Editorial;
-            this.edicion = Edicion;
-            this.autores = Autores;
-            this.idiomas = Idiomas;
-            this.categorias = Categorias;
-            this.numeropaginas = NumeroPaginas;
-            this.fechaedicion = FechaEdicion;
-            this.fechapublicacion = FechaPublicacion;
+            this.codigo = codigo;
+            this.titulo = titulo;
+            this.editorial = editorial;
+            this.edicion = edicion;
+            this.autores = autores;
+            this.idiomas = idiomas;
+            this.categorias = categorias;
+            this.numeropaginas = numeropaginas;
+            this.fechaedicion = fechaedicion;
+            this.fechapublicacion = fechapublicacion;
         }
         #endregion
 
@@ -159,6 +157,9 @@ namespace AppGestionEditorial.Modelo
         {
             return this.ToString().GetHashCode();
         }
+
+       
         #endregion
     }
+     
 }
