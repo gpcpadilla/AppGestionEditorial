@@ -1,4 +1,5 @@
 ﻿using AppGestionEditorial.Datos;
+using AppGestionEditorial.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,29 +15,27 @@ namespace AppGestionEditorial.Web
         {
 
         }
-
+        
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
 
 
-            {
+            
                 int id = int.Parse(txtid.Text);
                 
                 Facturas c = new Facturas(
-                                            txtestado.Text,
-                                            txtsucursal.Text,
+                                            id,
                                             txtfecha.Text,
-                                            id
-
+                                            txtsucursal.Text,
+                                            txtestado.Text
+      
 
                                            );
-
-
 
                 FacturasRepositorios data = new FacturasRepositorios();
 
                 data.add(c);
             }
+        
         }
     }
-}

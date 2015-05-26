@@ -34,7 +34,7 @@ namespace AppGestionEditorial.Web
 
 
 
-                ClientesRepositorios data = new ClientesRepositorios();
+                ClientesRepositorio data = new ClientesRepositorio();
 
                 data.add(c);
             }

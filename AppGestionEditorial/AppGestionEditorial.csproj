@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CientificosRepositorios.cs" />
-    <Compile Include="Datos\ClientesRepositorios.cs" />
+    <Compile Include="Datos\ClientesRepositorio.cs" />
     <Compile Include="Datos\FacturasRepositorios.cs" />
     <Compile Include="Datos\LibrosRepositorios.cs" />
     <Compile Include="Datos\RevistasRepositorios.cs" />
