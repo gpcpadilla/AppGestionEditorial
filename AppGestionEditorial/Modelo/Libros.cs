@@ -40,6 +40,7 @@ namespace AppGestionEditorial.Modelo
 
     #region "Constructores"
         public Libros()
+            :base()
         {
             this.numerotomos = 0000;
             this.numerocapitulos = 12;
@@ -47,12 +48,13 @@ namespace AppGestionEditorial.Modelo
         }
 
         public Libros(int codigo, string titulo, string editorial, string edicion, string autores, string idiomas,
-            string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion, 
+            string categorias, int numeropaginas, string fechaedicion, string fechapublicacion, 
             int numerotomos, int numerocapitulos, string nivel)
+            : base(codigo, titulo, editorial, edicion, autores, idiomas, categorias, numeropaginas, fechaedicion, fechapublicacion)
         {
             this.numerotomos = numerotomos;
             this.numerocapitulos = numerocapitulos;
-            this.nivel = Nivel;
+            this.nivel = nivel;
             
         }
         #endregion

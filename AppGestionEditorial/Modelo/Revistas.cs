@@ -33,6 +33,7 @@ namespace AppGestionEditorial.Modelo
 
     #region "Constructores"
         public Revistas()
+            :base()
         {
             this.numeroarticulos = 2;
             this.numerovolumenes = 4;
@@ -40,7 +41,8 @@ namespace AppGestionEditorial.Modelo
         }
 
         public Revistas(int codigo, string titulo, string editorial, string edicion, string autores, string idiomas,
-            string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion, int numeroarticulos, int numerovolumenes)
+            string categorias, int numeropaginas, string fechaedicion, string fechapublicacion, int numeroarticulos, int numerovolumenes)
+            : base(codigo, titulo, editorial, edicion, autores, idiomas, categorias, numeropaginas, fechaedicion, fechapublicacion)
         {
             this.numerovolumenes = numerovolumenes;
             this.numeroarticulos = numeroarticulos;

@@ -11,12 +11,12 @@ namespace AppGestionEditorial.Modelo
         private string titulo;        
         private string editorial;        
         private string edicion;
-        private string  autores;
-        private string idiomas;
+        private string  autores ;
+        private string idiomas ;
         private string categorias;
         private int numeropaginas;
-        private DateTime fechaedicion ;
-        private DateTime fechapublicacion;
+        private string fechaedicion ;
+        private string fechapublicacion;
         
         #endregion
 
@@ -69,13 +69,13 @@ namespace AppGestionEditorial.Modelo
             set { numeropaginas = value; }
         }
 
-        public DateTime FechaEdicion
+        public string FechaEdicion
         {
             get { return fechaedicion; }
             set {  fechaedicion  = value; }
         }
 
-        public DateTime FechaPublicacion
+        public string FechaPublicacion
         {
             get { return fechapublicacion; }
             set { fechapublicacion = value; }
@@ -100,7 +100,7 @@ namespace AppGestionEditorial.Modelo
         }
        
         public Documentos(int codigo , string titulo, string editorial, string  edicion, string autores, string idiomas,
-            string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion)
+            string categorias, int numeropaginas, string fechaedicion, string fechapublicacion)
         {
             this.codigo = codigo;
             this.titulo = titulo;

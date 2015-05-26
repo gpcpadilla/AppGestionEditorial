@@ -5,11 +5,11 @@ using System.Web;
 
 namespace AppGestionEditorial.Modelo
 {
-    public class Factura
+    public class Facturas
     {
     #region "Atributos"
         private int id;        
-        private DateTime fecha;        
+        private string fecha;        
         private string sucursal;
         private string estado;        
              
@@ -22,7 +22,7 @@ namespace AppGestionEditorial.Modelo
             set { id = value; }
         }
 
-        public DateTime Fecha
+        public string Fecha
         {
             get { return fecha; }
             set { fecha = value; }
@@ -44,17 +44,17 @@ namespace AppGestionEditorial.Modelo
         #endregion
 
     #region "Constructores"
-        public Factura()
+        public Facturas()
         {
         
             this.id = 0000;
-            this.fecha = fecha.Date;
+            this.fecha = "2 de noviembre";
             this.sucursal = "cartagena";
             this.estado = "pagado"; 
 
         }
 
-        public Factura(int id, DateTime fecha, string sucursal, string estado)
+        public Facturas(int id, string fecha, string sucursal, string estado)
         {
             this.id = id;
             this.fecha = fecha;
@@ -78,7 +78,7 @@ namespace AppGestionEditorial.Modelo
 
         public override bool Equals(object obj)
         {
-            Factura o = (Factura)obj;
+            Facturas o = (Facturas)obj;
             bool result = false;
 
             if ((this.id == o.id) &&

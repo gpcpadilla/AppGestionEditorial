@@ -11,6 +11,35 @@
     <script src="../Scripts/jquery-2.1.3.js" ></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+ <script type="text/javascript">
+        function mostrar(id) {
+            if (id == "Libros") {
+                $("#limitedecredito").show();
+                $("#tasadeinteres").show();
+                $("#talonario").hide();
+                $("#tasadeinteresh").hide();
+            }
+            if (id == "Revistas") {
+                $("#limitedecredito").hide();
+                $("#tasadeinteres").hide();
+                $("#talonario").show();
+                $("#tasadeinteresh").hide();
+            }
+            if (id == "Cientificos") {
+                $("#limitedecredito").hide();
+                $("#tasadeinteres").hide();
+                $("#talonario").hide();
+                $("#tasadeinteresh").show();
+            }
+            if (id == "0") {
+                $("#limitedecredito").hide();
+                $("#tasadeinteres").hide();
+                $("#talonario").hide();
+                $("#tasadeinteresh").hide();
+            }
+
+        }
+</script>
 </head>
 <body>
 
@@ -19,8 +48,12 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="Index.aspx">Principal</a></li>
-            <li role="presentation"><a href="create.aspx">boton1</a></li>
-            <li role="presentation"><a href="list.aspx">boton2</a></li>
+            <li role="presentation"><a href="IPublicacion.aspx">Publicar Un Documento</a></li>
+            <li role="presentation"><a href="list.aspx">Ver Documento</a></li>
+              <li role="presentation"><a href="list.aspx">Registrar Cliente</a></li>
+              <li role="presentation"><a href="listc.aspx">Ver Cliente</a></li>
+              <li role="presentation"><a href="list.aspx">Crear Factura</a></li>
+              <li role="presentation"><a href="listi.aspx">Imprimir Factura</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">App Gestion Bancaria</h3>

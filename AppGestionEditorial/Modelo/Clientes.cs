@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AppGestionEditorial.Modelo
 {
-    public class Cliente 
+    public class Clientes 
     {
     #region "Atributos"
         private int id;        
@@ -58,7 +58,7 @@ namespace AppGestionEditorial.Modelo
         #endregion
 
     #region "Constructores"
-        public Cliente()
+        public Clientes()
         {
         
             this.id = 0000;
@@ -70,7 +70,7 @@ namespace AppGestionEditorial.Modelo
 
         }
 
-        public Cliente(int id, string nombres, string apellidos, string direccion, int telefono, string email)
+        public Clientes(int id, string nombres, string apellidos, string direccion, int telefono, string email)
         {
             this.id = id;
             this.nombres = nombres;
@@ -98,7 +98,7 @@ namespace AppGestionEditorial.Modelo
 
         public override bool Equals(object obj)
         {
-            Cliente o = (Cliente)obj;
+            Clientes o = (Clientes)obj;
             bool result = false;
 
             if ((this.id == o.id) &&

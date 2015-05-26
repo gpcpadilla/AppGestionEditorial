@@ -25,13 +25,15 @@ namespace AppGestionEditorial.Modelo
 
     #region "Constructores"
         public Cientificos()
+            : base()
         {
             this.tipos= "tesis";
            
         }
 
         public Cientificos(int codigo, string titulo, string editorial, string edicion, string autores, string idiomas,
-            string categorias, int numeropaginas, DateTime fechaedicion, DateTime fechapublicacion, string tipos)
+            string categorias, int numeropaginas, string fechaedicion, string fechapublicacion, string tipos)
+            : base(codigo,titulo,editorial,edicion,autores,idiomas,categorias,numeropaginas,fechaedicion,fechapublicacion)
         {
             this.tipos = tipos;       
         }
