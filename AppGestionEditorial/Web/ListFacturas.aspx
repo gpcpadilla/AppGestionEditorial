@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web/Site1.Master" AutoEventWireup="true" CodeBehind="ListCliente.aspx.cs" Inherits="AppGestionEditorial.Web.ListCliente" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web/Site1.Master" AutoEventWireup="true" CodeBehind="ListFacturas.aspx.cs" Inherits="AppGestionEditorial.Web.ListFacturas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
     <div class="jumbotron">
-        <h2>Clientes Registrado</h2>
+        <h2>Facturas Generadas</h2>
         <div class ="table-responsive">
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1"
                 CssClass ="table table-bordered table-condensed table-responsive" CellPadding="4" ForeColor="#333333" GridLines="None">

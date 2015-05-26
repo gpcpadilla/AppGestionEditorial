@@ -10,7 +10,7 @@
 namespace AppGestionEditorial.Web {
     
     
-    public partial class Clientes {
+    public partial class Facturas {
         
         /// <summary>
         /// Control form1.
@@ -31,49 +31,31 @@ namespace AppGestionEditorial.Web {
         protected global::System.Web.UI.WebControls.TextBox txtid;
         
         /// <summary>
-        /// Control txtnombres.
+        /// Control txtestado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtnombres;
+        protected global::System.Web.UI.WebControls.TextBox txtestado;
         
         /// <summary>
-        /// Control txtapellidos.
+        /// Control txtsucursal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtapellidos;
+        protected global::System.Web.UI.WebControls.TextBox txtsucursal;
         
         /// <summary>
-        /// Control txtdireccion.
+        /// Control txtfecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdireccion;
-        
-        /// <summary>
-        /// Control txttelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttelefono;
-        
-        /// <summary>
-        /// Control txtemail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.TextBox txtfecha;
         
         /// <summary>
         /// Control btnGuardar.

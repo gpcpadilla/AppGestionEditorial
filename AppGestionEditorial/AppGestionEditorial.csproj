@@ -84,7 +84,11 @@
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Web\Clientes.aspx" />
+    <Content Include="Web\Facturas.aspx" />
+    <Content Include="Web\IPublicaciones.aspx" />
+    <Content Include="Web\List.aspx" />
     <Content Include="Web\ListCliente.aspx" />
+    <Content Include="Web\ListFacturas.aspx" />
     <Content Include="Web\Site1.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -108,12 +112,40 @@
     <Compile Include="Web\Clientes.aspx.designer.cs">
       <DependentUpon>Clientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web\Facturas.aspx.cs">
+      <DependentUpon>Facturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Facturas.aspx.designer.cs">
+      <DependentUpon>Facturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\IPublicaciones.aspx.cs">
+      <DependentUpon>IPublicaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\IPublicaciones.aspx.designer.cs">
+      <DependentUpon>IPublicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web\ListCliente.aspx.cs">
       <DependentUpon>ListCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Web\ListCliente.aspx.designer.cs">
       <DependentUpon>ListCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ListFacturas.aspx.cs">
+      <DependentUpon>ListFacturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ListFacturas.aspx.designer.cs">
+      <DependentUpon>ListFacturas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
