@@ -33,16 +33,16 @@ namespace AppGestionEditorial.Datos
                 Cientificos cientifico = new Cientificos(
 
                                                    int.Parse(ci.Element("Codigo").Value),
-                                                   int.Parse(ci.Element("Numero De Paginas").Value),
-                                                   int.Parse(ci.Element("Categorias").Value),
                                                    ci.Element("Titulo").Value,
-                                                   ci.Element("Tipos").Value,
                                                    ci.Element("Editoria").Value,
                                                    ci.Element("Edicion").Value,
                                                    ci.Element("Autores").Value,
                                                    ci.Element("Idiomas").Value,
+                                                   ci.Element("Categorias").Value,
+                                                   int.Parse(ci.Element("Numero De Paginas").Value),
+                                                   ci.Element("Fecha De Edicion").Value,
                                                    ci.Element("Fecha De Publicaion").Value,
-                                                   ci.Element("Fecha De Edicion").Value
+                                                   ci.Element("Tipos").Value
                                                );
                 lista.Add(cientifico);
 

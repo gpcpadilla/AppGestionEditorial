@@ -8,7 +8,6 @@ using System.Xml;
 using System.Web.Hosting;
 using System.IO;
 using System.Xml.Linq;
-using AppGestionEditorial.Web;
 namespace AppGestionEditorial.Datos
 {
     public class FacturasRepositorios

@@ -27,7 +27,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="getCheques" TypeName="App.Datos.ChequesRepositories"></asp:ObjectDataSource>
+            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="getLibros" TypeName="AppGestionEditorial.Datos.librosRepositorios"></asp:ObjectDataSource>
          </div>
 
         <h2>Lista De Revistas</h2>

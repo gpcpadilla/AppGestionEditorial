@@ -32,17 +32,22 @@ namespace AppGestionEditorial.DocumentosXML
                 Revistas revista = new Revistas(
 
                                                    int.Parse(r.Element("Codigo").Value),
-                                                   int.Parse(r.Element("Numero De Paginas").Value),
-                                                   int.Parse(r.Element("Categorias").Value),
-                                                   int.Parse(r.Element("Numero De Volumenes").Value),
-                                                   int.Parse(r.Element("Numero De Articulos").Value),
                                                    r.Element("Titulo").Value,
                                                    r.Element("Editoria").Value,
                                                    r.Element("Edicion").Value,
                                                    r.Element("Autores").Value,
                                                    r.Element("Idiomas").Value,
+                                                    r.Element("Categorias").Value,
+                                                   int.Parse(r.Element("Numero De Paginas").Value),
+                                                   r.Element("Fecha De Edicion").Value,
                                                    r.Element("Fecha De Publicaion").Value,
-                                                   r.Element("Fecha De Edicion").Value
+                                                   int.Parse(r.Element("Numero De Articulos").Value),                                                                                                
+                                                   int.Parse(r.Element("Numero De Volumenes").Value)
+                                                   
+                                                  
+                                                  
+                                                   
+                                                   
                                                );
                 lista.Add(revista);
 

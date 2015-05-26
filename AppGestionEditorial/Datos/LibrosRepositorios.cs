@@ -32,19 +32,19 @@ namespace AppGestionEditorial.DocumentosXML
             {
                 Libros libro = new Libros(
                                                                                                                    
-                                                   int.Parse(c.Element("Codigo").Value),
-                                                   int.Parse(c.Element("Numero De Paginas").Value),
-                                                   int.Parse(c.Element("Categorias").Value),
-                                                   int.Parse(c.Element("Numero De Tomos").Value),
-                                                   int.Parse(c.Element("Numero De Capitulos").Value),
-                                                   c.Element("Nivel").Value,
+                                                  int.Parse(c.Element("Codigo").Value),
                                                    c.Element("Titulo").Value,
                                                    c.Element("Editoria").Value,
                                                    c.Element("Edicion").Value,
                                                    c.Element("Autores").Value,
                                                    c.Element("Idiomas").Value,
+                                                   c.Element("Categorias").Value,
+                                                   int.Parse(c.Element("Numero De Paginas").Value),
+                                                   c.Element("Fecha De Edicion").Value,
                                                    c.Element("Fecha De Publicaion").Value,
-                                                   c.Element("Fecha De Edicion").Value
+                                                   int.Parse(c.Element("Numero De Tomos").Value),
+                                                   int.Parse(c.Element("Numero De Capitulos").Value),
+                                                   c.Element("Nivel").Value
                                                );
                 lista.Add(libro);
 
