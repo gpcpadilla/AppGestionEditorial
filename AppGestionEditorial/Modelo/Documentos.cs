@@ -94,8 +94,8 @@ namespace AppGestionEditorial.Modelo
             this.idiomas = "Idiomas";
             this.categorias = "Categorias";
             this.numeropaginas = 23;
-            this.fechaedicion = fechaedicion.Date;
-            this.fechapublicacion = fechapublicacion.Date;
+            this.fechaedicion = "";
+            this.fechapublicacion = "";
            
         }
        

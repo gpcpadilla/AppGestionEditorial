@@ -14,7 +14,7 @@
  <script type="text/javascript">
         function mostrar(id) {
             if (id == "Libros") {
-                $("#limitedecredito").show();
+                $("#limit").show();
                 $("#tasadeinteres").show();
                 $("#talonario").hide();
                 $("#tasadeinteresh").hide();
@@ -56,7 +56,7 @@
               <li role="presentation"><a href="listi.aspx">Imprimir Factura</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">App Gestion Bancaria</h3>
+        <h3 class="text-muted">App Gestion Editorial</h3>
       </div>
 
 

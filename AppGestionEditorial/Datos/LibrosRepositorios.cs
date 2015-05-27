@@ -22,7 +22,7 @@ namespace AppGestionEditorial.DocumentosXML
             List<Libros> lista = new List<Libros>();
 
             // Obtenemos la ruta de archivo XML
-            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/LibrosRepositorios.xml");
+            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/LibrosPublicados.xml");
 
             XDocument doc = XDocument.Load(ruta);
 
@@ -63,7 +63,7 @@ namespace AppGestionEditorial.DocumentosXML
 
         private void WriteXML(List<Libros> list)
         {
-            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/LibrosRepositorios.xml"), System.Text.Encoding.UTF8);
+            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/LibrosPublicados.xmll"), System.Text.Encoding.UTF8);
 
             //Inicio XML Documento
             xmlwriter.WriteStartDocument(true);

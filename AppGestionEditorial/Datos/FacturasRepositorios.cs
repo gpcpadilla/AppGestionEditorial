@@ -20,7 +20,7 @@ namespace AppGestionEditorial.Datos
             List<Facturas> lista = new List<Facturas>();
 
             // Obtenemos la ruta de archivo XML
-            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/FacturasRepositorios.xml");
+            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/FacturasGuardadas.xml");
 
             XDocument doc = XDocument.Load(ruta);
 
@@ -54,7 +54,7 @@ namespace AppGestionEditorial.Datos
 
         private void WriteXML(List<Facturas> list)
         {
-            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/ClientesRepositorios.xml"), System.Text.Encoding.UTF8);
+            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/FacturasGuardadas.xml"), System.Text.Encoding.UTF8);
 
             //Inicio XML Documento
             xmlwriter.WriteStartDocument(true);

@@ -23,7 +23,7 @@ namespace AppGestionEditorial.Web
             
                 int id = int.Parse(txtid.Text);
                 
-                Facturas c = new Facturas(
+                Facturas f = new Facturas(
                                             id,
                                             txtfecha.Text,
                                             txtsucursal.Text,
@@ -32,9 +32,9 @@ namespace AppGestionEditorial.Web
 
                                            );
 
-                FacturasRepositorios data = new FacturasRepositorios();
+                FacturasRepositorios dataf = new FacturasRepositorios();
 
-                data.add(c);
+                dataf.add(f);
             }
         
         }

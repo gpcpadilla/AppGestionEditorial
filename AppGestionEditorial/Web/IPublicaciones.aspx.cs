@@ -1,14 +1,14 @@
-﻿using System;
+﻿using AppGestionEditorial.Datos;
+using AppGestionEditorial.Modelo;
+using AppGestionEditorial.Web;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
-using AppGestionEditorial.Modelo;
-using AppGestionEditorial.Datos;
-using System.Xml;
 using System.Web.Hosting;
-using System.IO;
+using System.Xml;
 using System.Xml.Linq;
-using AppGestionEditorial.Web;
 
 namespace AppGestionEditorial.Web
 {
@@ -21,7 +21,6 @@ namespace AppGestionEditorial.Web
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             int codigo = int.Parse(txtcodigo.Text);
-            int categorias = int.Parse(txtcategorias.Text);
             int numerodepaginas = int.Parse(txtnumeropaginas.Text);
 
             string shipping_type = type.SelectedItem.Value;
@@ -32,11 +31,11 @@ namespace AppGestionEditorial.Web
                 
                 int numerotomos = int.Parse(txtnumerotomos.Text);
                  int nuemrocapitulos = int.Parse(txtnumerotomos.Text);
-                
-
+          
                 Libros c = new Libros(
 
-                                            codigo,numerodepaginas,categorias,
+                                            codigo,numerodepaginas,
+                                            txtcategorias.Text,
                                             txtedicion.Text,
                                             txttitulo.Text,
                                             txteditorial.Text,
@@ -49,11 +48,9 @@ namespace AppGestionEditorial.Web
                                             
                                            );
 
+                LibrosRepositorios datac = new LibrosRepositorios();
 
-
-                LibrosRepositorios data = new LibrosRepositorios();
-
-                data.add(c);
+                datac.add(c);
             }
                 #endregion
 
@@ -62,8 +59,8 @@ namespace AppGestionEditorial.Web
             {
 
                 Revistas r = new Revistas(
-                     int numeroarticulos = int.Parse(txtnumeroarticulos.Text);
-                     int numerovolumenes = int.Parse(txtnumerovolumenes.Text);
+                     int numerodearticulos = int.Parse(txtnumeroarticulos.Text);
+                     int numerodevolumenes = int.Parse(txtnumerovolumenes.Text);
 
                                             codigo, numerodepaginas, categorias,
                                             txtedicion.Text,
@@ -73,7 +70,7 @@ namespace AppGestionEditorial.Web
                                             txtidiomas.Text,
                                             txtfechaedicion.Text,
                                             txtfechapublicacion.Text,
-                                            numeroarticulos,numerovolumenes
+                                            numerodearticulos,numerodevolumenes
 
                                            );
 
@@ -82,8 +79,8 @@ namespace AppGestionEditorial.Web
                 ResvistasRepositorios meta = new ResvistasRepositorios();
 
                 meta.add(r);
-            }
-#endregion
+                 }
+                #endregion
 
             #region "Cientificos"
             if (shipping_type == "Cientificos")
@@ -91,7 +88,8 @@ namespace AppGestionEditorial.Web
                  int tipos = int.Parse(txttipos.Text);
                 Cientificos ci = new Cientificos(
                                             
-                                            codigo,numerodepaginas,categorias,
+                                            codigo,numerodepaginas,
+                                            txtcategorias.Text,
                                             txtedicion.Text,
                                             txttitulo.Text,
                                             txteditorial.Text,
@@ -101,7 +99,6 @@ namespace AppGestionEditorial.Web
                                             txtfechapublicacion.Text,
                                             tipos
 
-
                                            );
 
 
@@ -110,7 +107,6 @@ namespace AppGestionEditorial.Web
 
                 lugar.add(ci);
             #endregion
-            }
-        }
-    }
-}
+            
+        
+   

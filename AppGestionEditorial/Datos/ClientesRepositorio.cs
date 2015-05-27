@@ -14,21 +14,21 @@ namespace AppGestionEditorial.Datos
     public class ClientesRepositorio
     {
         #region Registrar Clientes
-        private static List<Clientes> datac = new List<Clientes>();
+        private static List<Clientes> datacliente = new List<Clientes>();
 
-        public List<Clientes> getClientes()
+        public List<Clientes> getPersona()
         {
             // Creamos la lista genérica de Personas
             List<Clientes> lista = new List<Clientes>();
 
             // Obtenemos la ruta de archivo XML
-            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/FacturasRepositorios.xml");
+            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/Clientesregistrados.xml");
 
             XDocument doc = XDocument.Load(ruta);
 
-            var clientesc = from c in doc.Descendants("Documentos") select c;
+            var people = from c in doc.Descendants("Documentos") select c;
 
-            foreach (XElement c in clientesc.Elements("Clientes"))
+            foreach (XElement c in people.Elements("Clientes"))
             {
                 Clientes cliente = new Clientes(
 
@@ -52,14 +52,14 @@ namespace AppGestionEditorial.Datos
 
         public void add(Clientes c)
         {
-            datac.Add(c);
-            WriteXML(datac);
+            datacliente.Add(c);
+            WriteXML(datacliente);
 
         }
 
         private void WriteXML(List<Clientes> list)
         {
-            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/ClientesRepositorios.xml"), System.Text.Encoding.UTF8);
+            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("DocumentosXML/Clientesregistrados.xml"), System.Text.Encoding.UTF8);
 
             //Inicio XML Documento
             xmlwriter.WriteStartDocument(true);

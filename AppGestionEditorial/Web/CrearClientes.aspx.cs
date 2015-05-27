@@ -1,4 +1,5 @@
 ﻿using AppGestionEditorial.Datos;
+using AppGestionEditorial.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,27 +18,21 @@ namespace AppGestionEditorial.Web
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-           
 
-            {
-                int identificacion = int.Parse(txtid.Text);
-                int telefono = int.Parse(txttelefono.Text);
-                Clientes c = new Clientes(
-                                            txtnombres.Text,
-                                            txtapellidos.Text,
-                                            txtemail.Text,
-                                            telefono,
-                                            identificacion
+            Clientes c = new Clientes( 
+                                        txtid.Text,
+                                        txtnombres.Text,
+                                        txtapellidos.Text,
+                                        txtdireccion.Text,
+                                        txttelefono.Text,
+                                        txtemail.Text
+                                       );
 
+            ClientesRepositorio datacliente = new ClientesRepositorio();
 
-                                           );
+            datacliente.add(c);
+        }
 
-
-
-                ClientesRepositorio data = new ClientesRepositorio();
-
-                data.add(c);
-            }
         }
     }
-}
+

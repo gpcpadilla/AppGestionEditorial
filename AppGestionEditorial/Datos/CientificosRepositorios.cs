@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AppGestionEditorial.Modelo;
-using AppGestionEditorial.Datos;
 using System.Xml;
-using System.Web.Hosting;
-using System.IO;
 using System.Xml.Linq;
 using AppGestionEditorial.Web;
 
@@ -22,7 +18,7 @@ namespace AppGestionEditorial.Datos
             List<Cientificos> lista = new List<Cientificos>();
 
             // Obtenemos la ruta de archivo XML
-            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/RevistasRepositorios.xml");
+            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/CientificosPublicados.xml");
 
             XDocument doc = XDocument.Load(ruta);
 
@@ -61,7 +57,7 @@ namespace AppGestionEditorial.Datos
 
         private void WriteXML(List<Cientificos> list)
         {
-            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/CientificosRepositorios.xml"), System.Text.Encoding.UTF8);
+            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/CientificosPublicados.xml"), System.Text.Encoding.UTF8);
 
             //Inicio XML Documento
             xmlwriter.WriteStartDocument(true);

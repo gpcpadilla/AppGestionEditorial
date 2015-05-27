@@ -54,7 +54,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="getCorrientes" TypeName="App.Datos.CorrientesRepositories"></asp:ObjectDataSource>
+            <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="getRevistas" TypeName="AppGestionEditorial.Datos.RevistasRepositorios"></asp:ObjectDataSource>
          </div>
 
         <h2>Lista De Cientificos</h2>
@@ -80,7 +80,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="getAhorros" TypeName="App.Datos.AhorrosRepositories"></asp:ObjectDataSource>
+            <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="getCientificos" TypeName="AppGestionEditorial.Datos.CientificosRepositorios"></asp:ObjectDataSource>
          </div>
 
     </div>

@@ -21,7 +21,7 @@ namespace AppGestionEditorial.DocumentosXML
             List<Revistas> lista = new List<Revistas>();
 
             // Obtenemos la ruta de archivo XML
-            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/RevistasRepositorios.xml");
+            string ruta = HttpContext.Current.Server.MapPath("/DocumentosXML/RevistasPublicadas.xml");
 
             XDocument doc = XDocument.Load(ruta);
 
@@ -66,7 +66,7 @@ namespace AppGestionEditorial.DocumentosXML
 
         private void WriteXML(List<Revistas> list)
         {
-            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/RevistasRepositorios.xml"), System.Text.Encoding.UTF8);
+            XmlTextWriter xmlwriter = new XmlTextWriter(HttpContext.Current.Server.MapPath("/DocumentosXML/RevistasPublicadas.xml"), System.Text.Encoding.UTF8);
 
             //Inicio XML Documento
             xmlwriter.WriteStartDocument(true);
